@@ -42,6 +42,7 @@ deps@1.0.9
 diff-sequence@1.0.1
 ecmascript@0.1.5
 ecmascript-collections@0.1.6
+eframework:accounts@1.2.3
 eframework:core@0.1.0
 ejson@1.0.7
 email@1.0.7
@@ -102,7 +103,6 @@ ordered-dict@1.0.4
 promise@0.5.0
 random@1.0.4
 rate-limit@1.0.0
-reactioncommerce:reaction-accounts@1.2.3
 reactive-dict@1.1.2
 reactive-var@1.0.6
 reload@1.1.4

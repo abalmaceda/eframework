@@ -35,7 +35,6 @@ nemo64:bootstrap
 
 # Reaction Commerce Packages
 
-reactioncommerce:reaction-accounts
 
 
 # Reaction Payment Packages
@@ -55,3 +54,4 @@ reactioncommerce:reaction-accounts
 #meteorhacks:kadira-profiler
 #meteortoys:allthings
 eframework:core
+eframework:accounts

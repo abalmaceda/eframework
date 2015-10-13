@@ -5,7 +5,7 @@
 describe("Packages", function() {
   beforeAll(function () {
     VelocityHelpers.exportGlobals();
-    Packages = ReactionCore.Collections.Packages.find().fetch();
+    Packages = EFrameworkCore.Collections.Packages.find().fetch();
   });
 
   it("should have enabled core", function() {

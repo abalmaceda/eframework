@@ -25,7 +25,7 @@ describe("Product", function() {
     /*
     it("should create new product by admin", function(done) {
       spyOn(Roles, "userIsInRole").and.returnValue(true);
-      productSpy = spyOn(ReactionCore.Collections.Products, "insert").and.returnValue(1);
+      productSpy = spyOn(EFrameworkCore.Collections.Products, "insert").and.returnValue(1);
 
       expect(function() {
         return Meteor.call("flushTranslations");
@@ -90,8 +90,8 @@ describe("Product", function() {
   describe("Add to cart", function() {
     // empty cart items before each test
     afterEach(function(done) {
-      var cartId = ReactionCore.Collections.Cart.findOne()._id;
-      ReactionCore.Collections.Cart.update({
+      var cartId = EFrameworkCore.Collections.Cart.findOne()._id;
+      EFrameworkCore.Collections.Cart.update({
         _id: cartId
       }, {
         $set: {
@@ -112,9 +112,9 @@ describe("Product", function() {
       var option1 = $('.variant-product-options .variant-select-option')[0];
       var addToCartButton = $('#add-to-cart');
       var cartCount = $('.cart-icon .badge').text();
-      var cartId = ReactionCore.Collections.Cart.findOne()._id;
+      var cartId = EFrameworkCore.Collections.Cart.findOne()._id;
       // needs client stubs
-      /*var spyOnCart = spyOn(ReactionCore.Collections.Cart, 'update').and.returnValue();*/
+      /*var spyOnCart = spyOn(EFrameworkCore.Collections.Cart, 'update').and.returnValue();*/
 
       var spyOnOptionEvent = spyOnEvent(option1, 'click');
       var spyOnAddToCartEvent = spyOnEvent(addToCartButton, 'click');

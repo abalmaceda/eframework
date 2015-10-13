@@ -73,12 +73,12 @@ _server/fixtures.coffee_
 ```
 Meteor.startup ->
   jsonFile =  Assets.getText("private/data/Shipping.json")
-  Fixtures.loadData ReactionCore.Collections.Shipping, jsonFile
+  Fixtures.loadData EFrameworkCore.Collections.Shipping, jsonFile
 ```
 
 Each installed package ('Reaction App') can also provide fixture data.
 
-See [the packages development documentation](//github.com/reactioncommerce/reaction-core/blob/master/docs/packages.md) for more details on using `Packages` fixture data with the `ReactionCore.registerPackage` method.
+See [the packages development documentation](//github.com/reactioncommerce/reaction-core/blob/master/docs/packages.md) for more details on using `Packages` fixture data with the `EFrameworkCore.registerPackage` method.
 
 **Reaction package settings**
 

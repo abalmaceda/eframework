@@ -8,7 +8,7 @@ Documentation for methods can be found in [methods.md](methods.md).
 It's also a good idea to review `core/server/methods/*` and `core/common/methods/*` source for reference.
 
 ### Namespace
-`ReactionCore` is exported as a global variable.
+`EFrameworkCore` is exported as a global variable.
 
 For more details take a look at [variables.md](variables.md).
 
@@ -17,9 +17,9 @@ See [themes.md](themes.md) for details on the themes and LESS implementation.
 
 ### Logging
 Client and server logging.
-- `ReactionCore.Log.info("This is some info")`
-- `ReactionCore.Log.warn("Warn Will Robinson")`
-- `ReactionCore.Log.debug("Stuff", stuffObject)`
+- `EFrameworkCore.Log.info("This is some info")`
+- `EFrameworkCore.Log.warn("Warn Will Robinson")`
+- `EFrameworkCore.Log.debug("Stuff", stuffObject)`
 
 More options and use examples at [logging.md](logging.md).
 

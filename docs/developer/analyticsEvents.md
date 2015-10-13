@@ -1,11 +1,11 @@
 # SEO and meta data
 
-Basic meta tag data is inserted by the `ReactionCore.MetaData.update` method.
+Basic meta tag data is inserted by the `EFrameworkCore.MetaData.update` method.
 
-You can add code to add additional meta objects to the `ReactionCore.MetaData.meta` array, and they will be added to the `<head>`.
+You can add code to add additional meta objects to the `EFrameworkCore.MetaData.meta` array, and they will be added to the `<head>`.
 
 Example:
-`ReactionCore.MetaData.meta.push 'name': 'og:title', 'content': product.title`
+`EFrameworkCore.MetaData.meta.push 'name': 'og:title', 'content': product.title`
 
 Site wide descriptions and keywords can be set in Dashboard->Settings.
 

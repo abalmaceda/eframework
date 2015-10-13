@@ -1,7 +1,7 @@
 /**
  * Reaction App Router
  * Define general app routing.
- * ReactionCore common/routing.js contains the core routes.
+ * EFrameworkCore common/routing.js contains the core routes.
  */
 
 let staticPages = ["about", "team", "faqs", "terms", "privacy" ];

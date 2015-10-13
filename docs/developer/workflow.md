@@ -185,7 +185,7 @@ If `workflow.workflow` contains the current `workflow.status`, that means the wo
 For reference, the Workflow schema is:
 
 ```javascript
-ReactionCore.Schemas.Workflow = new SimpleSchema({
+EFrameworkCore.Schemas.Workflow = new SimpleSchema({
   template: {
     type: String,
     optional: true

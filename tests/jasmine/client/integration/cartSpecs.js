@@ -11,8 +11,8 @@ describe("Cart", function () {
   describe("Add to cart", function () {
     // empty cart items before each test
     afterEach(function (done) {
-      let cartId = ReactionCore.Collections.Cart.findOne()._id;
-      ReactionCore.Collections.Cart.update({
+      let cartId = EFrameworkCore.Collections.Cart.findOne()._id;
+      EFrameworkCore.Collections.Cart.update({
         _id: cartId
       }, {
         $set: {
@@ -33,7 +33,7 @@ describe("Cart", function () {
       let option1 = $(".letiant-product-options .letiant-select-option")[0];
       let addToCartButton = $("#add-to-cart");
       // needs client stubs
-      /* let spyOnCart = spyOn(ReactionCore.Collections.Cart, "update").and.returnValue();*/
+      /* let spyOnCart = spyOn(EFrameworkCore.Collections.Cart, "update").and.returnValue();*/
 
       let spyOnOptionEvent = spyOnEvent(option1, "click");
       let spyOnAddToCartEvent = spyOnEvent(addToCartButton, "click");

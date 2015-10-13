@@ -1,5 +1,5 @@
 # Packages
-Reaction packages are Meteor packages that add a call to `ReactionCore.registerPackage` declaring the package structure to the Reaction registry.
+Reaction packages are Meteor packages that add a call to `EFrameworkCore.registerPackage` declaring the package structure to the Reaction registry.
 
 ## Core Packages
 For local core package development you must _git clone_ packages locally, either into `reaction/packages`, or define the `PACKAGES_DIR` env variable for an alternate location.
@@ -81,13 +81,13 @@ meteor add your-new-package
 
 _Tip: You can also add and remove packages by editing `.meteor/packages`_
 
-### ReactionCore.registerPackage
-The `ReactionCore.registerPackage` method describes a Meteor package to other Reaction packages.
+### EFrameworkCore.registerPackage
+The `EFrameworkCore.registerPackage` method describes a Meteor package to other Reaction packages.
 
 Integrate packages with reaction-core by adding **server/register.js**
 
 ```javascript
-ReactionCore.registerPackage({
+EFrameworkCore.registerPackage({
   label: 'PayPal',
   name: 'reaction-paypal',
   autoEnable: false,
@@ -132,7 +132,7 @@ You may filter, or define using any of the optional registry properties:
 **package**
 
 ```
-ReactionCore.registerPackage({
+EFrameworkCore.registerPackage({
   name: 'core',
   autoEnable: true,
   settings: {
@@ -289,7 +289,7 @@ Users with "owner" role are full-permission, app-wide users.
 
 ```
     # client / server
-    ReactionCore.hasOwnerAccess()
+    EFrameworkCore.hasOwnerAccess()
 
     # template
     {{#if hasOwnerAccess}}
@@ -300,7 +300,7 @@ Users with "admin" role are full-permission, site-wide users.<br>**To check if u
 
 ```
   # client / server
-  ReactionCore.hasAdminAccess()
+  EFrameworkCore.hasAdminAccess()
 
   # template
   {{#if hasAdminAccess}}
@@ -313,7 +313,7 @@ Users with "dashboard" role are limited-permission, site-wide users.
 
 ```
   # client / server
-  ReactionCore.hasDashboardAccess()
+  EFrameworkCore.hasDashboardAccess()
 
   # template
   {{#if hasDashboardAccess}}
@@ -324,13 +324,13 @@ To check if user has some specific permissions:
 on Client: for current user, where "permissions" is string or ['string']
 
 ```
-ReactionCore.hasPermission(permissions)
+EFrameworkCore.hasPermission(permissions)
 ```
 
 on Server: for some shop (current if not defined) and some userId (current if not defined), where "permissions" is string or ['string']
 
 ```
-ReactionCore.hasPermission(permissions, shop, userId)
+EFrameworkCore.hasPermission(permissions, shop, userId)
 ```
 
 in templates:
@@ -344,7 +344,7 @@ For using shop permissions in some packages you must add it into register direct
 Another example:
 
 ```
-ReactionCore.registerPackage
+EFrameworkCore.registerPackage
  name: 'reaction-commerce-orders'
  provides: ['orderManager']
  permissions: [
@@ -368,12 +368,12 @@ Router.map ->
     path: 'dashboard/settings/paypal',
     template: 'paypal'
     waitOn: ->
-      return ReactionCore.Subscriptions.Packages
+      return EFrameworkCore.Subscriptions.Packages
 ```
 
 Use the controller `ShopController` for public/shop routes, and `ShopAdminController` for admin roles.
 
-In addition to defining the route in the `Router.map`, you should add the route and template in the `ReactionCore.registerPackage` to export this route to ReactionCore and add permissions.
+In addition to defining the route in the `Router.map`, you should add the route and template in the `EFrameworkCore.registerPackage` to export this route to EFrameworkCore and add permissions.
 
 ###Collections
 
@@ -384,8 +384,8 @@ You can extend core collections, schemas in your package. You can also create yo
 Example of extending a core schema:
 
 ```
-ReactionCore.Schemas.BraintreePackageConfig = new SimpleSchema([
-  ReactionCore.Schemas.PackageConfig
+EFrameworkCore.Schemas.BraintreePackageConfig = new SimpleSchema([
+  EFrameworkCore.Schemas.PackageConfig
   {
     "settings.mode":
       type: Boolean
