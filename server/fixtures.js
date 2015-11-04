@@ -1,13 +1,13 @@
 /**
- * Reaction startup
+ * E-Framework startup
  *
- * Load app private fixtures
+ * Cargar app privates fixtures
  */
 
 Meteor.startup(function () {
-  try {
-    return Fixtures.loadSettings(Assets.getText("settings/reaction.json"));
-  } catch (error) {
-    EFrameworkCore.Log.debug("loadSettings reaction.json not loaded.", error);
-  }
+	try {
+		return Fixtures.loadSettings(Assets.getText("settings/eFramework.json"));
+	} catch (error) {
+		EFrameworkCore.Log.debug("loadSettings eFramework.json not loaded.", error);
+	}
 });
