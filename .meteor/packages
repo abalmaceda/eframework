@@ -55,8 +55,12 @@ nemo64:bootstrap
 #meteorhacks:kadira
 #meteorhacks:kadira-profiler
 #meteortoys:allthings
-eframework:core
-eframework:accounts
 accounts-google
 accounts-base
 accounts-password
+eframework:eframework-core
+eframework:eframework-accounts
+eframework:eframework-core-theme
+eframework:eframework-bootstrap-theme
+eframework:eframework-shipping
+eframework:eframework-payments-paypal

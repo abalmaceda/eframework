@@ -1,0 +1,10 @@
+{
+    "modules": {
+        "accounts": true,
+        "cart": true,
+        "core": true,
+        "dashboard": true,
+        "layout": true,
+        "products": true
+    }
+}

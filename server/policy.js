@@ -11,10 +11,13 @@
 BrowserPolicy.content.allowFontDataUrl();
 
 BrowserPolicy.content.allowOriginForAll("fonts.googleapis.com");
+BrowserPolicy.content.allowOriginForAll("https://fonts.googleapis.com");
 
 BrowserPolicy.content.allowOriginForAll("fonts.gstatic.com");
 
 BrowserPolicy.content.allowOriginForAll("enginex.kadira.io");
+
+BrowserPolicy.content.allowOriginForAll("bootswatch.com");
 
 BrowserPolicy.content.allowImageOrigin("graph.facebook.com");
 

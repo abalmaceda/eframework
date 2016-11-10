@@ -16,7 +16,7 @@ describe("Packages", function() {
 
   it("should have enabled accounts", function() {
     expect(Packages.length).toBeGreaterThan('1');
-    var corePackage = _.findWhere(Packages, {name:"reaction-accounts"});
+    var corePackage = _.findWhere(Packages, {name:"eframework-accounts"});
     expect(corePackage.enabled).toEqual(true);
   });
 

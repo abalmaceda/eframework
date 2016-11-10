@@ -38,7 +38,7 @@ describe('client layout', function() {
   describe('coreLayout template', function() {
 
     it('loads navigation header', function() {
-      expect($('body > nav.reaction-navigation-header').text()).not.toBeNull();
+      expect($('body > nav.eframework-navigation-header').text()).not.toBeNull();
     });
 
     it('loads product pricing', function() {

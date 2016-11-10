@@ -1,17 +1,32 @@
 {
-  "ROOT_URL": "",
-  "MONGO_URL": "",
-  "MAIL_URL": "",
-  "reaction": {
+    "ROOT_URL": "localhost:3123",
+    "MAIL_URL": "",
+    "MONGO_URL": "",
+    "NODE_ENV": "debug",
     "REACTION_USER": "admin",
-    "REACTION_AUTH": "admisnitrador",
-    "REACTION_EMAIL": "root@gmail"
-  },
-  "isDebug": "TRACE",
-  "public": {
-    "velocity:html-reporter": {
-      "position": "top right",
-      "tab-index" : 1
-    }
-  }
+    "REACTION_EMAIL": "root@gmail.com",
+    "REACTION_AUTH": "root",
+    "isDebug": "TRACE",
+    "public": {
+        "velocity:html-reporter": {
+            "position": "top right",
+            "tab-index": 1
+        }
+    },
+    "paypal":{
+    	"payment_method": "credit_card",
+	    "funding_instruments": [
+	      {
+	        "credit_card": {
+	          "number": "5500005555555559",
+	          "type": "mastercard",
+	          "expire_month": 12,
+	          "expire_year": 2018,
+	          "cvv2": 111,
+	          "first_name": "Betsy",
+	          "last_name": "Buyer"
+	        }
+	      }
+	    ]
+	}
 }
